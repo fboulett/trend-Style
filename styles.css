@@ -36,9 +36,9 @@ font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans
   
 button:hover{background-color:aqua;cursor: pointer;}
 
-.contenedor-card{box-sizing: border-box;margin: 5px;max-width:100px;display: flex;justify-content: center;}
+.contenedor-card{box-sizing: border-box;margin: 5px;max-width:100px;display: flex;justify-content: center;background-color: azure;}
 
-.card{align-items: center;justify-content: center;}
+.card{align-items: center;justify-content: center;background-color: azure;}
 
 
 .imagen_producto{justify-content: center;}
@@ -57,6 +57,7 @@ button:hover{background-color:aqua;cursor: pointer;}
 .precio-actual{color: black;}
 .producto-meta{color: black;box-sizing: border-box;font-size: small;}
 .derechos{font-size: small;padding-top: 20px;}
+
 
 
 
