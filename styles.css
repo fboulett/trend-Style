@@ -57,6 +57,11 @@ button:hover{background-color:aqua;cursor: pointer;}
 .precio-actual{color: black;}
 .producto-meta{color: black;box-sizing: border-box;font-size: small;}
 .derechos{font-size: small;padding-top: 20px;}
+@media screen and (max-width: 1024px) { 
+  
+.listaLink{flex-direction: column;}
+  
+}
 
 
 
