@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Trend&Style</title>
+</head>
+
+<body class="body">
+    <header><img src="media/TREND LINEAL.jpg" alt="LOGO" width="30%" >
+    </header>
+
+    <section class="contenedor_login_seccion">
+    <span class="login_exitoso">
+        <p>Bienvenido: <span id="email_usuario"></span></p>
+        <img src="media/pngaaa.com-5036557.png" alt="LOGO" width="25px" height="25">
+        <button class="boton" id="boton_logout" type="button">Cerrar sesión</button>
+    </span>
+
+    <span >
+        <form class="contenedor_login" id="formulario_loging">
+            <input 
+                class="input_ingreso" 
+                id="user_input" 
+                type="email" 
+                placeholder="Usuario" 
+                required>
+            <div id="empty_email_error" class="error-message"></div>
+
+            <input 
+                class="input_ingreso" 
+                id="user_password" 
+                type="password" placeholder="Contraseña" 
+                required>
+            <div id="empty_psw_error" class="error-message"></div>
+
+            <button class="boton" id="boton_login" type="submit">Ingresar</button>
+
+            <div id="login_error_error" class="error-message"></div>
+        </form>
+    </span>
+    </section>
+
+
+
+
+        <nav class="navegador">
+            <ul class="listaLink">
+                 <li ><a class="link" href="index.html">INICIO</a></li>
+                 <li ><a class="link" href="carteras.html">CARTERAS</a></li>
+                 <li ><a class="link" href="bandoleras.html">BANDOLERAS</a></li>
+                 <li ><a class="link" href="bolsos.html">BOLSOS</a></li>
+                 <li ><a class="link" href="contacto.html">CONTACTO</a></li>
+            </ul>
+        </nav>
+
+        
+    <h1 class="Bienvenida">TREND&STYLE.  - LO ULTIMO EN TENDECIA -</h1>
+
+    <h2 class ="titulo_ofertas"> <p>Descubre la calidad insuperable de nuestros materiales, diseñados para durar. Cada pieza es una declaración de moda, con diseños novedosos que marcan tendencia. Encuentra el accesorio perfecto que combina elegancia y funcionalidad solo aquí.</p> </h2>
+
+
+    <main>
+
+    <div class="carrito_imagenes">    
+
+        <!-- CONTENEDOR PRINCIPAL DEL SLIDESHOW -->
+        <div class="slideshow-container" id="slideshow-container">
+
+            <!-- DIAPOSITIVAS -->
+            
+            <!-- Slide 1 -->
+            <div class="slide active-slide">
+                <img 
+                    src="media/cartera marron.png" 
+                    alt="El Sol"
+                >
+                <div class="text-overlay">Cartera Marroqui.</div>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="slide">
+                <img 
+                    src="media/cartera celeste clara.jpg" 
+                    alt="El Mar"
+                >
+                <div class="text-overlay">Cartera Gucci.</div>
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="slide">
+                <img 
+                    src="media/cartera azul.jpg" 
+                    alt="La Montaña"
+                >
+                <div class="text-overlay">Duo lapislázuli.</div>
+            </div>
+            
+            <!-- -->
+
+                <script>
+                    let slideIndex = 1;
+                    let slides = [];
+                    const autoSlideInterval = 3000; // Define el tiempo de transición en milisegundos (3 segundos)
+                    
+                    // Función de inicialización
+                    window.addEventListener('load', function() {
+                        slides = document.querySelectorAll('.slide');
+
+                        // 1. Mostrar la primera diapositiva (ya tiene 'active-slide' en HTML, pero la reaseguramos)
+                        mostrarSlide(slideIndex);
+
+                        // 2. Iniciar el bucle automático
+                        iniciarBucleAutomatico();
+                    });
+                    
+                    // Función para iniciar la transición automática
+                    function iniciarBucleAutomatico() {
+                        setInterval(() => {
+                            // Avanzar al siguiente índice
+                            slideIndex++;
+                            mostrarSlide(slideIndex);
+                        }, autoSlideInterval);
+                    }
+
+                    // Función principal que actualiza la vista
+                    function mostrarSlide(n) {
+                        if (slides.length === 0) return;
+
+                        // Lógica cíclica: si se pasa del último, vuelve al primero
+                        if (n > slides.length) {
+                            slideIndex = 1;
+                        }
+                        // Lógica cíclica: no necesitamos manejar 'n < 1' ya que solo avanzamos.
+
+                        // 1. Ocultar todas las diapositivas
+                        slides.forEach(slide => slide.classList.remove('active-slide'));
+
+                        // 2. Mostrar la diapositiva actual
+                        slides[slideIndex - 1].classList.add('active-slide');
+                    }
+                    // La función cambiarSlide(n) ha sido eliminada.
+                </script>
+        </div>    
+    </div> 
+
+    <div class="contenedor_sepadador">
+        <h2 class="titulo_ofertas">Nueva Temporada</h2>
+        <span class ="titulo_ofertas">Mira las nuevas tendencias que vienen este año!</span>
+    </div>
+        <DIV class="video_cartera">
+            <iframe class="video_contenedor"
+                src="https://www.youtube.com/embed/m03yxsf-2b0" 
+                title="YouTube video player" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                referrerpolicy="strict-origin-when-cross-origin" 
+                allowfullscreen>
+            </iframe>
+        </DIV>   
+
+    </main>
+
+    <footer class="pie"> 
+        <div class="contenedor_footer">      
+        <span class="news_letter">Suscribite al News Letter <input type="email" id="correo" name="correo" placeholder="   usted@dominio.com"><button class="boton">Enviar</button></span><span class="icono_insta">Instagram <img src="/FULL STACK/WORKSPACE/media/images.png" alt=""width=20px> </span>
+        </div>
+        
+        <div class="contenedor_derechos">  
+            <span class="derechos">Todos los derechos reservados  ©  </span>  
+            <span class="derechos">Política de Privacidad </span>
+            <span class="derechos">Términos y Condiciones </span>
+        </div>          
+    </footer>
+
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <script src="index.js"></script>
+</body>
+</html>
